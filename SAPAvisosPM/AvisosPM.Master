@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AvisosPM.master.cs" Inherits="SAPAvisosPM.Web.AvisosPM" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Creación Avisos PM</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.css" />
+    <link rel="stylesheet" type="text/css" href="css/formValidation.css" />
+
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/moment-with-locales.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+<%--    <script type="text/javascript" src="js/formValidation.min.js"></script>
+    <script type="text/javascript" src="js/framework/bootstrap.min.js"></script>--%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <header role="banner">
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+
+                        <a class="navbar-brand" href="Consulta.aspx">
+                            <br />
+                            Creación Avisos PM </a>
+                        <br />
+
+
+
+                    </div>
+
+                    <div class="navbar-collapse collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <!-- <li class="active"><a href="Default.aspx">Login</a></li>     -->
+                            <li>&nbsp;&nbsp;&nbsp;</li>
+                            <li>
+                                <br />
+                                <br />
+                                &nbsp;Usuario AssetCare/SAP:<span runat="server" id="usrconn" class=" label label-default">-</span> </li>
+                            <li>
+                                <br />
+                                <br />
+                                &nbsp;Ambiente:<span runat="server" id="ambconn" class=" label label-default">-</span> </li>
+                            <li>
+                                <br />
+                                <br />
+                                &nbsp;Mandante:<span runat="server" id="mandan" class=" label label-default">-</span></li>
+                            <li>
+                                <br />
+                                <br />
+                                &nbsp;-&nbsp;<span runat="server" id="idsis" class=" label label-default">-</span></li>
+                            <li>&nbsp;<asp:HyperLink ID="HplLogout" runat="server" ImageUrl="~/img/logout-32.png" NavigateUrl="~/Logout.aspx"></asp:HyperLink>
+                            </li>
+                            <li>
+                                <img id="logoADO" src="img/x2C.jpg"
+                                    style="display: block; margin: 35px auto;" /></li>
+                        </ul>
+
+                    </div>
+
+                    <br />
+                </div>
+            </nav>
+
+
+        </header>
+        <script type="text/javascript">
+            function preventBack() { window.history.forward(); }
+            setTimeout("preventBack()", 0);
+            window.onunload = function () { null };
+        </script>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
